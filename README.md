@@ -25,3 +25,12 @@ Zoom Clone using NodeJS, WebRTC and Websockets.
 
 1. Express로 할 일은 view를 설정해주고, render 해주는 것.
 2. pug 파일을 만들었지만, npm run dev하는 데 있어서 not found라고 계속 떠서 직접 instlal함.
+
+# 0.4 Recap
+
+1. Nodemon은 우리의 프로젝트를 살펴보고 변경 사항이 있을 시 서버를 재시작해주는 프로그램.
+2. 여기서는 서버를 재시작하는 대신에 babel-node를 실행하게 되는데, Babel은 우리가 작성한 코드를 일반 NodeJS 코드로 컴파일 해주는데, 그 작업을 src/server.js 파일에 해준다.
+3. server.js 파일에서는 express를 import하고, express 어플리케이션을 구성하고, 여기에 view engine을 pug로 설정하고, views 디렉토리가 설정되고, public 파일들에 대해서도 똑같은 작업을 해주고 있다.
+4. public 파일들은 frontend에서 구동되는 코드다. server.js는 backend에서, app.js는 frontend에서 구동된다.
+5. app.get("/\*", (req, res) => res.redirect("/"));
+   => 어떤 url로 들어갈려고 해도, home으로만 돌아오게 된다.
