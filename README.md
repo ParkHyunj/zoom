@@ -34,3 +34,11 @@ Zoom Clone using NodeJS, WebRTC and Websockets.
 4. public 파일들은 frontend에서 구동되는 코드다. server.js는 backend에서, app.js는 frontend에서 구동된다.
 5. app.get("/\*", (req, res) => res.redirect("/"));
    => 어떤 url로 들어갈려고 해도, home으로만 돌아오게 된다.
+
+# 1.1 HTTP vs WebSockets
+
+1. HTTP, WebSockets => protocol의 종류
+2. backend(server)는 client(user)의 request가 오면 response만 할 뿐, client를 잊어버린다.(stateless)
+3. http protocol => request에 대한 response만 있을 뿐, 저장하거나 다른 기능은 없다.
+4. browser가 websocket request를 보내면, 서버는 받거나 거절하기를 한다. 이런 왔다갔다가 한번 성립되면 이 연결을 성립(establish)라고 한다.
+5. websocket으로 인한 연결 상태에서, 서버는 request를 기다리지 않고, 답장을 할 수 있다.(bi-directional(양방향의) 연결이기 때문)
