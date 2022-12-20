@@ -42,3 +42,16 @@ Zoom Clone using NodeJS, WebRTC and Websockets.
 3. http protocol => request에 대한 response만 있을 뿐, 저장하거나 다른 기능은 없다.
 4. browser가 websocket request를 보내면, 서버는 받거나 거절하기를 한다. 이런 왔다갔다가 한번 성립되면 이 연결을 성립(establish)라고 한다.
 5. websocket으로 인한 연결 상태에서, 서버는 request를 기다리지 않고, 답장을 할 수 있다.(bi-directional(양방향의) 연결이기 때문)
+6. websocket의 연결 상태에서는 서버만 response를 할 수도 있다.
+
+# 1.2 WebSockets in NodeJS
+
+1. nodejs로 websocket 서버를 만들어 보자.
+2. ws는 websocket의 핵심이다.
+
+# 1.3 WebSocket Events
+
+1. backend와 frontend 사이의 connection(연결)을 만들어 보자.
+2. websocket은 listen할 특정한 event명이 정해져 있다.(그것들을 잘 사용하자.)
+3. ws(websocket), wss(sebsocket secure)로 지정을 해서, http가 아닌 url로 우리의 정보를 제공한다.
+4. webSocket은 브라우저와 서버 사이의 연결
