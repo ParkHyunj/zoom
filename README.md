@@ -55,3 +55,10 @@ Zoom Clone using NodeJS, WebRTC and Websockets.
 2. websocket은 listen할 특정한 event명이 정해져 있다.(그것들을 잘 사용하자.)
 3. ws(websocket), wss(sebsocket secure)로 지정을 해서, http가 아닌 url로 우리의 정보를 제공한다.
 4. webSocket은 브라우저와 서버 사이의 연결
+
+# 1.4 WebSocket Messages
+
+1. server.js에서, socket.on("message", message => {
+   console.log(message.toString('utf8'));
+   });
+2. addEventListener는 자바스크립트 함수이고 on은 NodeJS 함수
